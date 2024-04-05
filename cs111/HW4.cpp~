@@ -1,0 +1,170 @@
+#include "HW4.hpp" 
+#include<iostream>
+   
+using namespace std;
+box::box()
+{
+  length=0;
+  width=0;
+  height=0;
+  weight=0;
+  address="";
+  city="";
+  state="";
+  zipcode="";
+}
+
+box::box(double len, double wid, double hei, double wei, string addr, string cit, string stat, string zip)
+{
+  if(len<0)
+    length=0;
+  else
+    length=len;
+
+  if(wid<0)
+    width=0;
+  else
+    width=wid;
+
+  if(hei<0)
+    height=0;
+  else
+    height=hei;
+
+
+  if(wei<0)
+    weight=0;
+  else
+    weight=wei;
+
+  if(addr.length()==0)
+    address="";
+  else
+    address=addr;
+
+  if(cit.length()==0)
+    city="";
+  else
+    city=cit;
+
+  if(stat.length()==2 )
+    state=stat;
+  else
+    state="XX";
+
+  if(zip.length()==0)
+    zipcode=""; 
+  else
+    zipcode=zip;
+
+  stringstream geek(zip);
+  int _zip=0;
+  geek>>_zip;
+  if(_zip>9999 && _zip<=99999) 
+    zipcode=zip;
+  else
+    zipcode="00000"; 
+}
+void box::setLength(double len)
+{
+  if(len<0)
+    length=0;
+  else
+    length=len;
+}
+void box::setWidth(double wid)
+{
+  if(wid<0)
+    width=0;
+  else
+    width=wid;
+}
+void box::setHeight(double hei)
+{
+  if(hei<0)
+    height=0;
+  else
+    height=hei;
+}
+void box::setWeight(double wei)
+{
+  if(wei<0)
+    weight=0;
+  else
+    weight=wei;
+}
+void box::setAddress(string addr){
+  address=addr;
+}
+void box::setCity(string cit)
+{
+  city=cit;
+}
+void box::setState(string stat)
+{
+  if(stat.length()>2)
+    state="XX";
+  else
+    state=stat;
+}
+void box::setZipcode(string zip)
+{
+  stringstream geek(zip);
+  int _zip=0;
+  geek>>_zip;
+  if(_zip>9999 && _zip<=99999)
+    zipcode=zip;
+  else
+    zipcode="00000";
+}
+
+double box::getLength()
+{
+  return length;
+}
+double box::getWidth()
+{
+  return width;
+}
+double box::getHeight()
+{
+  return height;
+}
+double box::getWeight()
+{
+  return weight;
+}
+string box::getAddress()
+{
+  return address;
+}
+string box::getCity()
+{
+  return city;
+}
+string box::getState()
+{
+  return state;
+}
+string box::getZipcode()
+{
+  return zipcode;
+}
+double box::calcShippingPrice()
+{
+  return (((length + width + height) * 0.50) + (weight * 1.00));
+}
+void box::printInfo()
+{
+  cout<<"-----------------------Box Information---------------------"<<endl;
+  cout<<"Length : "<<length<<" inches "<<endl;
+  cout<<"Width : "<<width<<" inches "<<endl;
+  cout<<"Height : "<<height<<" inches "<<endl;
+  cout<<"Weight : "<<weight<<" pounds "<<endl;
+  cout<<"Address : "<<address<<endl;
+  cout<<"City : "<<city<<endl;
+  cout<<"State : "<<state<<endl;
+  cout<<"ZipCode : "<<zipcode<<endl;
+  cout<<"Shipping Price : "<<calcShippingPrice()<<"$"<<endl;
+  cout<<"------------------------------------------------------------"<<endl;
+}

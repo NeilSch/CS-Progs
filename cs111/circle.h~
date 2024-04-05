@@ -1,0 +1,14 @@
+#ifndef CIRCLE_H
+#define CIRCLE_H
+class circle
+{
+ public:
+  circle(); 
+  circle(int r);
+  double getRadius();
+  void setRadius(int r);
+  double getArea();
+ private:
+  double radius; 
+};
+#endif

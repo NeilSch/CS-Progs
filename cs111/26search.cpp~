@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int seqsearch(int key)
+{
+  const int size=10;
+  int array[size]={12,-7,3,17,42,6,18,-15,0,1};
+  for(int cycle=0;cycle<size;cycle++)
+    {
+      
+      if(array[cycle]=array[key])
+	{
+	  cout << "Pass!" << endl;
+	}
+      else
+	{
+	  cout << "Fail!" << endl;
+	}
+    }
+  return 0;
+}
+
+int main()
+{
+  int key;
+  cout << "Please enter a number to search for: " << endl;
+  cin >> key;
+  seqsearch(key);
+    return 0;
+}

@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int status=0;
+  char school;
+  char grade;
+
+  cout << "Are you currently enrolled in a class (Y/N)?" << endl;
+  cin >> school;
+  if ((school=='y')||(school=='Y'))
+    {
+      status++;
+      cout << "Please enter your letter grade for this class: " << endl;
+      cin >> grade;
+      switch (grade)
+	{
+	case 'A':
+	case 'a':
+	case 'B':
+	case 'b':
+	  cout << "Great Job!" << endl;
+	  break;
+	case 'C':
+	case 'c':
+	  cout << "You're doing alright." << endl;
+	  break;
+	case 'D':
+	case 'd':
+	case 'F':
+	case 'f':
+	  cout << "You can improve." << endl;
+	  break;
+	default:
+	  cout << "Invalid Grade." << endl;
+	}
+    }
+  else if((school=='n')||(school=='N'))
+    {
+      status++;
+    cout << "Thanks for using the system." << endl;
+    }
+  else if(status==0)
+    {
+    cout << "Invalid Input" << endl;
+    }
+  return 0;
+}

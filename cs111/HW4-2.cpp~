@@ -1,0 +1,29 @@
+//------------------------main.cpp-------------------------------------
+
+#include "box.hpp"
+#include<iostream>
+#include<string.h>
+int main()
+{
+  box b1(20, -10, 10, 10, "MNIT", "Jaipur City", "Rajasthan", "1345");
+  b1.printInfo();
+  cout<<b1.getAddress()<<endl;
+  cout<<b1.getCity()<<endl;
+  cout<<b1.getState()<<endl;
+  cout<<b1.getZipcode()<<endl;
+  cout<<b1.getHeight()<<endl;
+  cout<<b1.getWeight()<<endl;
+  cout<<b1.getLength()<<endl;
+  cout<<b1.getWidth()<<endl;
+
+  b1.setAddress("MNNIT");
+  b1.setCity("ALAHABAD");
+  b1.setState("UP");
+  b1.setZipcode("201030");
+  b1.setHeight(12);
+  b1.setWeight(12);
+  b1.setWidth(12);
+  b1.setLength(12);
+  b1.printInfo();
+  return 0;
+}

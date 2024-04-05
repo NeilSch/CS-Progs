@@ -1,0 +1,31 @@
+#include "circle.h"
+const double PI = 3.14;
+
+circle::circle()
+{
+  radius = 0;
+}
+
+circle::circle(int r)
+{
+  if(r < 0) 
+    {
+      r = 0;
+    }
+  radius = r;
+}
+
+void ::setRadius(int r)
+{
+  radius = r;
+}
+
+int circle::getRadius()
+{
+  return radius;
+}
+
+double circle::getArea()
+{
+  return PI * radius * radius;
+}

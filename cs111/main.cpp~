@@ -1,0 +1,19 @@
+#include <iostream>
+#include "circle.h"
+using namespace std;
+int main() 
+{              
+  circle round1 = circle();             
+  circle round2 = circle(7);
+
+  cout<<"Circle One - Radius: "<<round1.getRadius()<<", Area: "<<round1.getArea()<<endl;
+  cout<<"Circle Two - Radius: "<<round2.getRadius()<<", Area: "<<round2.getArea()<<endl;
+  cout<<"Setting radius of Circle One as 14"<<endl;
+  round1.setRadius(14);
+  cout<<"Circle One - Radius: "<<round1.getRadius()<<", Area: "<<round1.getArea()<<endl;
+  cout<<"Setting radius of Circle Two as negative "<<endl;
+  round2.setRadius(-4);
+  cout<<"Circle Two - Radius: "<<round2.getRadius()<<", Area: "<<round2.getArea()<<endl;
+
+return 0;
+}
