@@ -1,0 +1,106 @@
+Script started on Sat 01 Oct 2022 06:34:15 PM PDT
+]0;schne047@empress:~/CS471Progs/HW2-FWDC[?1034h[schne047@empress HW2-FWDC]$ g++ fwdc.cpp
+]0;schne047@empress:~/CS471Progs/HW2-FWDC[schne047@empress HW2-FWDC]$ ./a.out
+>>>Expand:RRRR
+Trying to add: LRRR unsafe!
+Trying to add: LLRR unsafe!
+Trying to add: LRLR safe!
+Not in frontier yet
+Trying to add: LRRL unsafe!
+Frontier is:
+LRLR g = 1 h = 2 f = 3
+Best is: LRLR
+d
+>>>Expand:LRLR
+Trying to add: RRLR safe!
+Not in frontier yet
+Trying to add: RRRR been there already
+Frontier is:
+RRLR g = 2 h = 2 f = 4
+Best is: RRLR
+d
+>>>Expand:RRLR
+Trying to add: LRLR been there already
+Trying to add: LLLR safe!
+Not in frontier yet
+Trying to add: LRLL safe!
+Not in frontier yet
+Frontier is:
+LLLR g = 3 h = 1 f = 4
+LRLL g = 3 h = 1 f = 4
+Best is: LLLR
+d
+>>>Expand:LLLR
+Trying to add: RLLR unsafe!
+Trying to add: RRLR been there already
+Trying to add: RLRR safe!
+Not in frontier yet
+Frontier is:
+LRLL g = 3 h = 1 f = 4
+RLRR g = 4 h = 2 f = 6
+Best is: LRLL
+d
+>>>Expand:LRLL
+Trying to add: RRLL unsafe!
+Trying to add: RRRL safe!
+Not in frontier yet
+Trying to add: RRLR been there already
+Frontier is:
+RLRR g = 4 h = 2 f = 6
+RRRL g = 4 h = 2 f = 6
+Best is: RLRR
+d
+>>>Expand:RLRR
+Trying to add: LLRR unsafe!
+Trying to add: LLLR been there already
+Trying to add: LLRL safe!
+Not in frontier yet
+Frontier is:
+RRRL g = 4 h = 2 f = 6
+LLRL g = 5 h = 1 f = 6
+Best is: RRRL
+d
+>>>Expand:RRRL
+Trying to add: LRRL unsafe!
+Trying to add: LLRL safe!
+Already in frontier
+Trying to add: LRLL been there already
+Frontier is:
+LLRL g = 5 h = 1 f = 6
+Best is: LLRL
+d
+>>>Expand:LLRL
+Trying to add: RLRL safe!
+Not in frontier yet
+Trying to add: RRRL been there already
+Trying to add: RLRR been there already
+Frontier is:
+RLRL g = 6 h = 1 f = 7
+Best is: RLRL
+d
+>>>Expand:RLRL
+Trying to add: LLRL been there already
+Trying to add: LLLL
+>>Reached goal: LLLL
+came from 
+RRRR
+came from 
+LRLR
+came from 
+RRLR
+came from 
+LLLR
+came from 
+LRLL
+came from 
+RLRR
+came from 
+RRRL
+came from 
+LLRL
+came from 
+RLRL
+]0;schne047@empress:~/CS471Progs/HW2-FWDC[schne047@empress HW2-FWDC]$ exit
+exit
+
+Script done on Sat 01 Oct 2022 06:34:42 PM PDT

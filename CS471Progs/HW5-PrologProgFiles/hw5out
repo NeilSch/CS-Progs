@@ -1,0 +1,41 @@
+Script started on Sat 05 Nov 2022 12:55:20 PM PDT
+]0;schne047@empress:~/CS471Progs/HW5-PrologProgFiles[?1034h[schne047@empress HW5-PrologProgFiles]$ gprolog
+GNU Prolog 1.4.4 (64 bits)
+Compiled Jan 15 2014, 20:38:19 with gcc
+By Daniel Diaz
+Copyright (C) 1999-2013 Daniel Diaz
+| ?- consult('hwt 5')('hw5').
+compiling /home/students/schne047/CS471Progs/HW5-PrologProgFiles/hw5.pl for byte code...
+/home/students/schne047/CS471Progs/HW5-PrologProgFiles/hw5.pl compiled, 25 lines read - 1222 bytes written, 16 ms
+
+yes
+| ?- find(Who)(Who).
+The answer is: mary
+
+Who = mary ? aThe answer is: bill
+
+Who = billThe answer is: dc10
+
+Who = dc10
+
+(1 ms) yes
+| ?- bird(Who)(Who).
+
+Who = bill
+
+yes
+| ?- wings(Who)(Who).
+
+Who = mary ? a
+
+Who = bill
+
+Who = dc10
+
+yes
+| ?- 
+Prolog interruption (h for help) ? e
+]0;schne047@empress:~/CS471Progs/HW5-PrologProgFiles[schne047@empress HW5-PrologProgFiles]$ exit
+exit
+
+Script done on Sat 05 Nov 2022 12:56:06 PM PDT

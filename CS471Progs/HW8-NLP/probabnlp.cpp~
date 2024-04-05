@@ -1,0 +1,138 @@
+//***********************************
+// FALL22 YOSHII: N-gram probability use
+// The input file can be of any format
+// ***********************************
+//-------------------------------------
+// YOUR NAME: Neil Schneringer
+// Tested on Empress using g++
+//-------------------------------------
+//(DONE) means a comment that had ** was completed
+// add includes here (DONE)
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+//data structure to record file input
+struct prob 
+{
+  char letter;  // next
+  string pre;   // previous
+  double ans;  // probability
+};
+
+double probability(vector<prob>&, string);                  // recursive helper function for finding probability
+double probability(vector<prob>&, string, string, double);  // recursive function for finding probabiltiy
+
+// This program uses trigram probabilities to produce P(word) 
+int main()
+{
+  //store probabilities
+  vector<prob> v;
+  //stores input file
+  string path;
+  //user inputted word
+  string temp;
+  //for reading files
+  fstream fin;
+  //struct to pass through
+  prob build;
+  //final probability of entered phrase
+  double final;
+  //temporary string holder
+  string hold;
+  //another temporary string holder that signifies how sleepy I am right now!
+  string tired;
+  //another! i am bad at coding and couldn't think of another way to read from file!
+  double killme;
+
+  //Ask the user for the input file name (DONE)
+  cout << "Enter a file name: " << endl;
+  cin >> path;
+  
+  //Read in the trigram probabilties (DONE)
+  fin.open(path.c_str());
+  //Check to see if file exists; close program if not
+  if(!fin) {                                
+    cout << "Unable to open file: " << path << endl;
+    return 0;
+  }
+  
+  while(getline(fin,hold)) 
+    {
+      //read from file
+      stringstream ss(hold);
+      ss >> tired;
+      build.letter = tired[0];
+      ss >> tired;
+      build.pre = tired;
+      ss >> killme;
+      build.ans = killme;
+      v.push_back(build);
+    }
+
+  //display
+  for(int i = 0; i < v.size(); i++)
+    {
+      cout << "P(" << v[i].letter << " | " << v[i].pre << ") = " << v[i].ans << endl;
+    }
+
+  // ** Repeat the following until the user
+  //    wants to quit:
+ 
+  do {
+    // Ask the user to enter a word (DONE)
+    cout << "Enter a word (or quit to quit): " << endl;
+    cin >> temp;
+    if (temp == "quit") {} //do NOTHING
+    else {
+      // Show all the probabilities you used
+      // to calculate the P(word)
+      final = probability(v, temp); 
+      cout << endl;
+      // Show the P(word) (DONE)
+      cout << "The probability of the phrase " << temp << "  is: " << final << "" << endl;
+    }
+    // end of loop (DONE)
+  } while (temp != "quit");
+  return 0;
+} 
+
+double probability(vector<prob> &v, string input) {
+  int i = 0;
+  // find index in vector of correct probability based on next and preceding letters
+  // because this is always the first letter, the preceding should be null string
+  while((input[0] != v[i].letter) && (v[i].pre == "null")) {
+    i+=1;
+  }
+
+  // output
+  cout << "P(" << input << ") " << "= " << v[i].ans << "(" << v[i].letter << " | " << v[i].pre << ") ";
+
+  // call recursive function as return
+  return probability(v, input.substr(1,input.length()-1), string(1, input[0]), v[i].ans);
+}
+
+double probability(vector<prob> &v, string input, string pre, double p) {
+  // make sure we havent reached the end of the string
+  if (!input.empty()) {
+    int i = 0;
+    // find appropriate index of vector
+    while((input[0] != v[i].letter) || (pre != v[i].pre)) {
+      i+=1;
+    }
+    // output stuff
+    cout << "* " << v[i].ans << "(" << v[i].letter << " | " << v[i].pre << ") ";
+    p*=v[i].ans;                                                   // find new probability
+    string nextpre;                                             
+    if (v[i].pre.length() > 1) nextpre = v[i].pre.substr(1,1);      // if there should be multiple preceding letters
+    else nextpre = v[i].pre.substr(0,1);                            // if there should be only 1 preceding letter
+    nextpre+=v[i].letter;                                           // add current letter to the next preceding letters for recursive call
+    return probability(v, input.substr(1,input.length()-1), nextpre, p);  // recursive call
+  }
+  else
+    return p;                                                       // if the string was empty return the last probabilty
+}

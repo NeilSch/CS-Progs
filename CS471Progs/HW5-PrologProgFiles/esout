@@ -1,0 +1,52 @@
+Script started on Sat 05 Nov 2022 02:29:30 PM PDT
+]0;schne047@empress:~/CS471Progs/HW5-PrologProgFiles[?1034h[schne047@empress HW5-PrologProgFiles]$ gprolog
+GNU Prolog 1.4.4 (64 bits)
+Compiled Jan 15 2014, 20:38:19 with gcc
+By Daniel Diaz
+Copyright (C) 1999-2013 Daniel Diaz
+| ?- consult('ESexample'('ESexample').
+compiling /home/students/schne047/CS471Progs/HW5-PrologProgFiles/ESexample.pl for byte code...
+/home/students/schne047/CS471Progs/HW5-PrologProgFiles/ESexample.pl:21-22: warning: singleton variables [Skin] for choose/5
+/home/students/schne047/CS471Progs/HW5-PrologProgFiles/ESexample.pl:29-30: warning: singleton variables [Skin] for choose/5
+/home/students/schne047/CS471Progs/HW5-PrologProgFiles/ESexample.pl:39-40: warning: singleton variables [Skin] for choose/5
+/home/students/schne047/CS471Progs/HW5-PrologProgFiles/ESexample.pl:44: warning: singleton variables [Hair,Skin,W,H] for choose/5
+/home/students/schne047/CS471Progs/HW5-PrologProgFiles/ESexample.pl:51: warning: singleton variables [Skin] for redish/2
+/home/students/schne047/CS471Progs/HW5-PrologProgFiles/ESexample.pl:53: warning: singleton variables [Hair] for redish/2
+/home/students/schne047/CS471Progs/HW5-PrologProgFiles/ESexample.pl compiled, 60 lines read - 3796 bytes written, 16 ms
+
+(2 ms) yes
+| ?- top.
+Hair color?red.
+Skin Tone?freckles.
+Weight? kg100.
+Height? cm400.
+You should wear a clown suit
+
+true ? t
+Action (; for next solution, a for all solutions, RET to stop) ? o
+Action (; for next solution, a for all solutions, RET to stop) ? p
+Action (; for next solution, a for all solutions, RET to stop) ? ;
+You should wear a clown suit
+
+true ? t
+Action (; for next solution, a for all solutions, RET to stop) ? o
+Action (; for next solution, a for all solutions, RET to stop) ? p
+Action (; for next solution, a for all solutions, RET to stop) ? aYou should wear a T-shirt and jeans
+
+(2 ms) yes
+| ?- top.
+Hair color?black.
+Skin Tone?fair.
+Weight? kg400.
+Height? cm100.
+You should wear a wedding gown
+
+true ? aYou should wear a T-shirt and jeans
+
+(1 ms) yes
+| ?- 
+Prolog interruption (h for help) ? e
+]0;schne047@empress:~/CS471Progs/HW5-PrologProgFiles[schne047@empress HW5-PrologProgFiles]$ exit
+exit
+
+Script done on Sat 05 Nov 2022 02:30:49 PM PDT

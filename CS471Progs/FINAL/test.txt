@@ -1,0 +1,178 @@
+Script started on Sat 17 Dec 2022 06:07:01 PM PST
+]0;schne047@empress:~/CS471Progs/FINAL[?1034h[schne047@empress FINAL]$ emacs hanoi.cppls[Kcd FINALls[Kcd CS471Progsls[Kexit/cs/submitIt_LK  G23 mytranslator.cpp[6Pg23projectmytranslator.cpp[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K[2Plscd CS471Progsls[Kcd FINALls[Kemacs hanoi.cpp[K g++ -std=c++11 hanoi.cpp
+
+]0;schne047@empress:~/CS471Progs/FINAL[schne047@empress FINAL]$ 
+]0;schne047@empress:~/CS471Progs/FINAL[schne047@empress FINAL]$ ./a.out
+>>>Expand:111
+Trying to add: 113 Not in frontier yet
+Trying to add: 112 Not in frontier yet
+Frontier is:
+113 g = 1 h = 2 f = 3
+112 g = 1 h = 3 f = 4
+Best is: 113
+a
+>>>Expand:113
+Trying to add: 112 Already in frontier
+Trying to add: 111 been there already
+Trying to add: 121 Not in frontier yet
+Frontier is:
+112 g = 1 h = 3 f = 4
+121 g = 2 h = 3 f = 5
+Best is: 112
+a
+>>>Expand:112
+Trying to add: 113 been there already
+Trying to add: 111 been there already
+Trying to add: 131 Not in frontier yet
+Frontier is:
+121 g = 2 h = 3 f = 5
+131 g = 2 h = 2 f = 4
+Best is: 131
+a
+>>>Expand:131
+Trying to add: 133 Not in frontier yet
+Trying to add: 132 Not in frontier yet
+Frontier is:
+121 g = 2 h = 3 f = 5
+133 g = 3 h = 1 f = 4
+132 g = 3 h = 2 f = 5
+Best is: 133
+a
+>>>Expand:133
+Trying to add: 132 Already in frontier
+Trying to add: 131 been there already
+Trying to add: 231 Not in frontier yet
+Frontier is:
+121 g = 2 h = 3 f = 5
+132 g = 3 h = 2 f = 5
+231 g = 4 h = 2 f = 6
+Best is: 121
+a
+>>>Expand:121
+Trying to add: 123 Not in frontier yet
+Trying to add: 122 Not in frontier yet
+Trying to add: 132 Already in frontier
+Frontier is:
+132 g = 3 h = 2 f = 5
+231 g = 4 h = 2 f = 6
+123 g = 3 h = 2 f = 5
+122 g = 3 h = 3 f = 6
+Best is: 132
+a
+>>>Expand:132
+Trying to add: 133 been there already
+Trying to add: 131 been there already
+Trying to add: 111 been there already
+Trying to add: 111 been there already
+Frontier is:
+231 g = 4 h = 2 f = 6
+123 g = 3 h = 2 f = 5
+122 g = 3 h = 3 f = 6
+Best is: 123
+a
+>>>Expand:123
+Trying to add: 122 Already in frontier
+Trying to add: 121 been there already
+Trying to add: 111 been there already
+Frontier is:
+231 g = 4 h = 2 f = 6
+122 g = 3 h = 3 f = 6
+Best is: 231
+a
+>>>Expand:231
+Trying to add: 233 Not in frontier yet
+Trying to add: 232 Not in frontier yet
+Frontier is:
+122 g = 3 h = 3 f = 6
+233 g = 5 h = 1 f = 6
+232 g = 5 h = 2 f = 7
+Best is: 122
+a
+>>>Expand:122
+Trying to add: 123 been there already
+Trying to add: 121 been there already
+Trying to add: 321 Not in frontier yet
+Frontier is:
+233 g = 5 h = 1 f = 6
+232 g = 5 h = 2 f = 7
+321 g = 4 h = 3 f = 7
+Best is: 233
+a
+>>>Expand:233
+Trying to add: 232 Already in frontier
+Trying to add: 231 been there already
+Trying to add: 131 been there already
+Frontier is:
+232 g = 5 h = 2 f = 7
+321 g = 4 h = 3 f = 7
+Best is: 232
+a
+>>>Expand:232
+Trying to add: 233 been there already
+Trying to add: 231 been there already
+Trying to add: 211 Not in frontier yet
+Trying to add: 211 Already in frontier
+Frontier is:
+321 g = 4 h = 3 f = 7
+211 g = 6 h = 3 f = 9
+Best is: 321
+a
+>>>Expand:321
+Trying to add: 323 Not in frontier yet
+Trying to add: 322 Not in frontier yet
+Trying to add: 332 Not in frontier yet
+Frontier is:
+211 g = 6 h = 3 f = 9
+323 g = 5 h = 2 f = 7
+322 g = 5 h = 3 f = 8
+332 g = 5 h = 2 f = 7
+Best is: 323
+a
+>>>Expand:323
+Trying to add: 322 Already in frontier
+Trying to add: 321 been there already
+Trying to add: 311 Not in frontier yet
+Frontier is:
+211 g = 6 h = 3 f = 9
+322 g = 5 h = 3 f = 8
+332 g = 5 h = 2 f = 7
+311 g = 6 h = 3 f = 9
+Best is: 332
+a
+>>>Expand:332
+Trying to add: 333
+>>Reached goal: 333
+Came from: 
+111
+Came from: 
+113
+Came from: 
+112
+Came from: 
+131
+Came from: 
+133
+Came from: 
+121
+Came from: 
+132
+Came from: 
+123
+Came from: 
+231
+Came from: 
+122
+Came from: 
+233
+Came from: 
+232
+Came from: 
+321
+Came from: 
+323
+Came from: 
+332
+]0;schne047@empress:~/CS471Progs/FINAL[schne047@empress FINAL]$ exit
+exit
+
+Script done on Sat 17 Dec 2022 06:07:42 PM PST

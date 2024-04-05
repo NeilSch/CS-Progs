@@ -1,0 +1,64 @@
+Script started on Sat 03 Dec 2022 11:25:14 PM PST
+]0;schne047@empress:~/CS471Progs/HW8-NLP[?1034h[schne047@empress HW8-NLP]$ ./a.out
+Enter a file name: 
+nlpProb.txt
+P(a | null) = 0.33
+P(b | null) = 0.33
+P(c | null) = 0.33
+P(a | a) = 0.2
+P(a | b) = 0.2
+P(a | c) = 0.2
+P(b | a) = 0.3
+P(b | b) = 0.3
+P(b | c) = 0.3
+P(c | a) = 0.3
+P(c | b) = 0.3
+P(c | c) = 0.3
+P(a | aa) = 0.1
+P(a | ab) = 0.1
+P(a | ac) = 0.1
+P(a | ba) = 0.1
+P(a | bb) = 0.1
+P(a | bc) = 0.1
+P(a | ca) = 0.1
+P(a | cb) = 0.1
+P(a | cc) = 0.1
+P(b | aa) = 0.1
+P(b | ab) = 0.1
+P(b | ac) = 0.1
+P(b | ba) = 0.1
+P(b | bb) = 0.1
+P(b | bc) = 0.1
+P(b | ca) = 0.1
+P(b | cb) = 0.1
+P(b | cc) = 0.1
+P(c | aa) = 0.1
+P(c | ab) = 0.1
+P(c | ac) = 0.1
+P(c | ba) = 0.1
+P(c | bb) = 0.1
+P(c | bc) = 0.1
+P(c | ca) = 0.1
+P(c | cb) = 0.1
+P(c | cc) = 0.1
+Enter a word (or quit to quit): 
+abbca
+0.33(a | ) * 0.3(b | a) * 0.1(b | ab) * 0.1(c | bb) * 0.1(a | bc)  = 9.9e-05
+Enter a word (or quit to quit): 
+baac
+0.33(b | ) * 0.2(a | b) * 0.1(a | ba) * 0.1(c | aa)  = 0.00066
+Enter a word (or quit to quit): 
+cab
+0.33(c | ) * 0.2(a | c) * 0.1(b | ca)  = 0.0066
+Enter a word (or quit to quit): 
+caaab
+0.33(c | ) * 0.2(a | c) * 0.1(a | ca) * 0.1(a | aa) * 0.1(b | aa)  = 6.6e-05
+Enter a word (or quit to quit): 
+bca
+0.33(b | ) * 0.3(c | b) * 0.1(a | bc)  = 0.0099
+Enter a word (or quit to quit): 
+quit
+]0;schne047@empress:~/CS471Progs/HW8-NLP[schne047@empress HW8-NLP]$ exit
+exit
+
+Script done on Sat 03 Dec 2022 11:26:06 PM PST
